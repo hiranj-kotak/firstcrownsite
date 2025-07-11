@@ -1,0 +1,31 @@
+/* ✅ First! */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities for animations */
+@layer utilities {
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-4xl {
+    box-shadow: 0 50px 80px -20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+
+.scale-down {
+  transform: scale(0.5);
+}

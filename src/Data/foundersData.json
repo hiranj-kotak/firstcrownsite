@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Priya Sharma",
+    "role": "CEO & Founder",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "desc": "Priya leads the vision and growth. With over 10 years in digital strategy, she ensures we stay ahead of the curve."
+  },
+  {
+    "name": "Arjun Mehta",
+    "role": "CTO",
+    "image": "https://randomuser.me/api/portraits/men/65.jpg",
+    "desc": "Arjun heads tech innovation. He's a full-stack engineer passionate about scalable digital products."
+  },
+  {
+    "name": "Riya Kapoor",
+    "role": "Creative Director",
+    "image": "https://randomuser.me/api/portraits/women/52.jpg",
+    "desc": "Riya crafts visual storytelling. Her creative direction defines our brand’s emotional appeal."
+  },
+  {
+    "name": "Karan Verma",
+    "role": "Head of Marketing",
+    "image": "https://randomuser.me/api/portraits/men/48.jpg",
+    "desc": "Karan leads marketing campaigns and growth hacking strategies with data-backed insights."
+  }
+]

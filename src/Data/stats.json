@@ -1,0 +1,21 @@
+[
+  {
+    "value": 8000000,
+    "label": "Trusted user",
+    "suffix": "M+",
+    "display": "8M+"
+  },
+  {
+    "value": 84000,
+    "label": "Telephonic talk",
+    "suffix": "K",
+    "display": "84K"
+  },
+  {
+    "value": 9000000,
+    "label": "Project Finished",
+    "suffix": "M+",
+    "display": "9M+"
+  },
+  { "value": 255, "label": "Award Winning", "suffix": "", "display": "255" }
+]
