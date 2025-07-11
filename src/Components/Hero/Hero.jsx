@@ -10,9 +10,9 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col md:flex-row  justify-between items-center px-[5vw] md:px-[10vw] pt-[10vh] pb-[20vh] min-h-screen w-full overflow-hidden">
       {/* Grid Lines */}
-      <div className="absolute top-0 left-0 w-full h-full z-0 bg-[#E9D5FF]" />
+      <div className="absolute top-0 left-0 w-full h-full z-0 bg-primary" />
       {/* Floating Icons */}
-      <HeroIcons/>
+      {/* <HeroIcons/> */}
       {/* <HeroIcons /> */}
       {/* Left Section */}
       <div className="relative z-10 flex flex-col gap-4 md:flex-[0.5] w-full text-black text-center md:text-left mt-10 md:mt-0">
@@ -55,10 +55,10 @@ const Hero = () => {
         <img src={rocket} alt="rocket" className="w-full mix-blend-multiply" />
       </div>
 
-      {/* Cloud */}
+      {/* Cloud
       <div className="absolute bottom-0 left-0 w-full -mb-[1vh] md:mb-[0vh] z-10">
         <img src={cloud} alt="cloud" className="w-full" />
-      </div>
+      </div> */}
     </section>
   )
 }

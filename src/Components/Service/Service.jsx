@@ -63,7 +63,7 @@ export default function Service() {
           trigger: sectionRef.current,
           start: 'top 80%',
         },
-      },
+      }
     )
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill())
@@ -71,13 +71,15 @@ export default function Service() {
 
   return (
     <section
-      id='service'
+      id="service"
       ref={sectionRef}
-      className="py-10 px-4 md:px-10 bg-[#f4eaff] min-h-screen text-black"
+      className="py-16 px-4 md:px-10 bg-primary text-white min-h-screen"
     >
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold">What we serve</h2>
-        <p className="mt-2 text-gray-600">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+          What we serve
+        </h2>
+        <p className="mt-2 text-[#d1b3ff] text-sm md:text-base">
           All things design, we got you covered.
         </p>
       </div>
@@ -87,21 +89,21 @@ export default function Service() {
           <Tilt
             key={index}
             glareEnable={true}
-            glareMaxOpacity={0.2}
-            glareColor="#d9c7ff"
+            glareMaxOpacity={0.1}
+            glareColor="#ffffff"
             glarePosition="all"
             scale={1.02}
             transitionSpeed={1000}
-            tiltMaxAngleX={8}
-            tiltMaxAngleY={8}
-            className="work-card relative rounded-2xl p-6 bg-[#e9d9ff] border border-[#c6aefc] outline outline-1 outline-[#dec8ff] shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            tiltMaxAngleX={6}
+            tiltMaxAngleY={6}
+            className="work-card relative rounded-2xl p-6 bg-[#6B21A8] border border-[#7E22CE] outline outline-1 outline-[#885fe7] shadow-md hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="flex flex-col gap-3">
-              <div className="text-purple-700 text-4xl">{service.icon}</div>
-              <h3 className="text-xl font-semibold leading-tight">
+              <div className="text-white text-4xl">{service.icon}</div>
+              <h3 className="text-lg font-semibold text-white leading-tight">
                 {service.title}
               </h3>
-              <p className="text-sm text-gray-800 leading-relaxed">
+              <p className="text-sm text-[#e2d3ff] leading-relaxed">
                 {service.desc}
               </p>
             </div>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import TextPressure from '../Heading/Heading'
+import ScrollFloat from '../Heading/Heading'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -67,24 +68,19 @@ function About({ className = '' }) {
       </div>
 
       {/* Heading */}
-
-      {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-          About us
-        </h2> */}
-      <div className="h-30 w-1/2 mx-auto mb-20"> {/* Example: w-1/2 or w-96 for a fixed width */}
-        <TextPressure
-          text="About-us"
-          flex={false}
-          alpha={false}
-          stroke={false}
-          width={true}
-          weight={true}
-          italic={true}
-          textColor="#000000"
-          strokeColor="#ff0000"
-          minFontSize={12}
-        />
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 ">
+      <div className="flex justify-center mb-10"> {/* Example: w-1/2 or w-96 for a fixed width */}
+        <ScrollFloat
+          animationDuration={3}
+          ease='back.inOut(2)'
+          scrollStart='center bottom+=50%'
+          scrollEnd='bottom bottom-=40%'
+          stagger={0.03}
+        >
+            About us
+        </ScrollFloat>
       </div>
+      </h2>
 
 
       {/* <p className="text-gray-500 text-lg">
