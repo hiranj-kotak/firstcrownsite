@@ -10,6 +10,7 @@ import Footer from '../../Components/Footer/Footer'
 import Service from '../../Components/Service/Service'
 import FAQ from '../../Components/Faq'
 import ContactForm from '../../Components/ContactForm/ContactForm'
+import { div, h1 } from 'motion/react-client'
 
 const sectionColors = {
   hero: '#2a015b',
@@ -39,39 +40,51 @@ function Home() {
   }
 
   return (
-    <div>
-      <div ref={sectionRefs.hero} data-section="hero">
-        <Hero />
-      </div>
-      <div ref={sectionRefs.about} data-section="about">
-        <About />
-      </div>
-      <div ref={sectionRefs.founders} data-section="founders">
-        <FoundersSection />
-      </div>
-      <div ref={sectionRefs.number} data-section="number">
-        <Number />
-      </div>
-      <div ref={sectionRefs.work} data-section="work">
-        <Work />
-      </div>
-      <div ref={sectionRefs.service} data-section="service">
-        <Service />
-      </div>
-      <div ref={sectionRefs.client} data-section="client">
-        <Client />
-      </div>
-      <div ref={sectionRefs.faq} data-section="faq">
-        <FAQ />
-      </div>
-      <div ref={sectionRefs.contact} data-section="contact">
-        <ContactForm />
-      </div>
-      <div ref={sectionRefs.footer} data-section="footer">
-        <Footer />
-      </div>
-    </div>
+    // <div>
+    //   <div ref={sectionRefs.hero} data-section="hero">
+    //     <Hero />
+    //   </div>
+    //   <div ref={sectionRefs.about} data-section="about">
+    //     <About />
+    //   </div>
+    //   <div ref={sectionRefs.founders} data-section="founders">
+    //     <FoundersSection />
+    //   </div>
+    //   <div ref={sectionRefs.number} data-section="number">
+    //     <Number />
+    //   </div>
+    //   <div ref={sectionRefs.work} data-section="work">
+    //     <Work />
+    //   </div>
+    //   <div ref={sectionRefs.service} data-section="service">
+    //     <Service />
+    //   </div>
+    //   <div ref={sectionRefs.client} data-section="client">
+    //     <Client />
+    //   </div>
+    //   <div ref={sectionRefs.faq} data-section="faq">
+    //     <FAQ />
+    //   </div>
+    //   <div ref={sectionRefs.contact} data-section="contact">
+    //     <ContactForm />
+    //   </div>
+    //   <div ref={sectionRefs.footer} data-section="footer">
+    //     <Footer />
+    //   </div>
+    // </div>
+   <div>
+    <Hero/>
+    <About/>
+    <FoundersSection/>
+    <Number/>
+    <Work/>
+    <Service/>
+    <Client/>
+    <FAQ/>
+    <ContactForm/>
+    <Footer/> 
+   </div>
   )
 }
 
-export default Home;
+export default Home
