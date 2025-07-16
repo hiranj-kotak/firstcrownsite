@@ -29,11 +29,10 @@ function Work() {
 
       const scrollWidth = wrapperElem.scrollWidth - scrollElem.clientWidth
 
-      // Horizontal scroll via ScrollTrigger
       ScrollTrigger.create({
         trigger: scrollElem,
         start: 'top 20%',
-        end: () => `+=${scrollWidth* 0.4}`, // Faster scroll
+        end: () => `+=${scrollWidth * 0.4}`,
         pin: true,
         scrub: true,
         anticipatePin: 1,
@@ -43,7 +42,6 @@ function Work() {
         markers: false,
       })
 
-      // Animation for cards
       gsap.from(workItemElements, {
         opacity: 0,
         x: 100,
@@ -63,20 +61,17 @@ function Work() {
   }, [])
 
   return (
-    <section className="px-0 py-20 bg-white" id="work">
+    <section className="px-0 py-20" id="work">
       {/* Heading */}
       <div className="px-10 mb-10 flex justify-center">
-        <h2 className="text-4xl font-bold text-gray-900 text-center">
+        <h2 className="text-4xl font-bold text-center">
           Recent Work
         </h2>
       </div>
 
       {/* Horizontal Scroll Section */}
-      <div ref={scrollRef} className="overflow-hidden ">
-        <div
-          ref={wrapperRef}
-          className="flex space-x-10 px-10 md:px-0 w-max"
-        >
+      <div ref={scrollRef} className="overflow-hidden">
+        <div ref={wrapperRef} className="flex space-x-10 px-10 md:px-0 w-max">
           <div className="flex-shrink-0 min-w-[calc(50vw-187.5px)]" />
           {workItems.map((item, index) => (
             <div
@@ -92,7 +87,7 @@ function Work() {
                 />
               </div>
               <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.subtitle}</p>
+              <p className="text-sm opacity-70">{item.subtitle}</p>
             </div>
           ))}
           <ViewMoreCard />

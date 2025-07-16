@@ -11,7 +11,7 @@ const FAQ = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
 
   return (
-    <section className="bg-[#2a015b] text-white py-16 px-4 md:px-10">
+    <section className="py-16 px-4 md:px-10">
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-extrabold">You ask, we answer</h2>
         <p className="text-[#d1b3ff] mt-2">
