@@ -8,14 +8,14 @@ const heroWords = ['Results', 'Growth', 'Leads', 'Impact']
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col md:flex-row  justify-between items-center px-[5vw] md:px-[10vw] pt-[10vh] pb-[20vh] min-h-screen w-full overflow-hidden">
+    <section className="relative flex flex-col md:flex-row text-white  justify-between items-center px-[5vw] md:px-[10vw] pt-[10vh] pb-[20vh] min-h-screen w-full overflow-hidden">
       {/* Grid Lines */}
       <div className="absolute top-0 left-0 w-full h-full z-0 bg-primary" />
       {/* Floating Icons */}
       {/* <HeroIcons/> */}
       {/* <HeroIcons /> */}
       {/* Left Section */}
-      <div className="relative z-10 flex flex-col gap-4 md:flex-[0.5] w-full text-black text-center md:text-left mt-10 md:mt-0">
+      <div className="relative z-10 flex flex-col gap-4 md:flex-[0.5] w-full text-white text-center md:text-left mt-10 md:mt-0">
         <div className="flex flex-col gap-4 min-h-[6rem] md:min-h-[10rem] items-center md:items-start">
           <div className="font-thin text-[5rem] md:text-[5rem] lg:text-[7.5rem] leading-none">
             Organic
@@ -23,7 +23,7 @@ const Hero = () => {
 
           <WordListSwap
             texts={heroWords}
-            mainClassName="text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-bold leading-none text-purple-600 overflow-hidden relative flex items-end min-h-[4rem] md:min-h-[8rem]"
+            mainClassName="text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-bold leading-none text-white overflow-hidden relative flex items-end min-h-[4rem] md:min-h-[8rem]"
             staggerFrom="last"
             initial={{ y: '100%' }}
             animate={{ y: 0, opacity: 1 }}
@@ -35,7 +35,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="text-sm mt-4 text-gray-600 px-4 md:px-0">
+        <div className="text-sm mt-4 text-gray-300 px-4 md:px-0">
           We offer flexible pricing plans so that our <br />
           clients can take advantage of services.
         </div>

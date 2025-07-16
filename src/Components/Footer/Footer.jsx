@@ -8,14 +8,14 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-[#f5ebff] text-gray-800 px-6 py-12">
+    <footer className="bg-primary text-white px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Logo & Description */}
         <div>
           <div className="bg-gray-700 text-white px-4 py-2 inline-block rounded">
             Logo
           </div>
-          <p className="mt-4 text-sm text-gray-700 leading-relaxed">
+          <p className="mt-4 text-sm  leading-relaxed">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas labore dolor accusantium
             consequatur pariatur. Qui, adipisci deserunt. Labore, corrupti distinctio.
           </p>

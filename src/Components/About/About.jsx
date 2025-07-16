@@ -1,138 +1,104 @@
 import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import TextPressure from '../Heading/Heading'
-import ScrollFloat from '../Heading/Heading'
+import Hero from '../../Components/Hero/Hero'
+import About from '../../Components/About/About'
+import Number from '../../Components/Number/Number'
+import FoundersSection from '../../Components/FoundersSection/FoundersSection'
+import Work from '../../Components/Work/Work'
+import Client from '../../Components/Client/Client'
+import Footer from '../../Components/Footer/Footer'
+import Service from '../../Components/Service/Service'
+import FAQ from '../../Components/Faq'
+import ContactForm from '../../Components/ContactForm/ContactForm'
 
-gsap.registerPlugin(ScrollTrigger)
+const sectionColors = {
+  hero: '#2a015b',
+  about: '#fffff',
+  founders: '#4c1d95',
+  number: '#5b21b6',
+  work: '#6b21a8',
+  service: '#7e22ce',
+  client: '#8b5cf6',
+  faq: '#9333ea',
+  contact: '#d8b4fe',
+  footer: '#2a015b',
+}
 
-function About({ className = '' }) {
-  const sectionRef = useRef(null)
-  const imageRef = useRef(null)
+function Home() {
+  const sectionRefs = {
+    hero: useRef(null),
+    about: useRef(null),
+    founders: useRef(null),
+    number: useRef(null),
+    work: useRef(null),
+    service: useRef(null),
+    client: useRef(null),
+    faq: useRef(null),
+    contact: useRef(null),
+    footer: useRef(null),
+  }
 
   useEffect(() => {
-    const section = sectionRef.current
-    const image = imageRef.current
-    const paragraphs = gsap.utils.toArray('.about-para')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting)
+        if (visible) {
+          const sectionId = visible.target.getAttribute('data-section')
+          const bgColor = sectionColors[sectionId]
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
+          // 💡 Apply directly to the body
+          document.body.style.transition = 'background-color 0.6s ease'
+          document.body.style.backgroundColor = bgColor
+        }
       },
+      {
+        threshold: 0.3,
+      }
+    )
+
+    Object.entries(sectionRefs).forEach(([key, ref]) => {
+      if (ref.current) {
+        ref.current.setAttribute('data-section', key)
+        observer.observe(ref.current)
+      }
     })
 
-    // Image animation
-    tl.fromTo(
-      image,
-      { x: -100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
-    )
-
-    // Paragraphs reveal one by one
-    tl.fromTo(
-      paragraphs,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: 'power2.out',
-        stagger: 0.3,
-      },
-      '-=0.4',
-    )
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section
-      id='about'
-      ref={sectionRef}
-      className={`w-full px-[10vw] pt-[10vh] pb-[20vh] min-h-screen bg-white ${className}`}
-    >
-      {/* Top Intro Text */}
-      <div className="w-full mx-auto text-center mb-16">
-        <p className="text-xl md:text-2xl font-regular text-gray-800 leading-relaxed">
-          <span className="text-purple-500 font-semibold">First Crown</span>{' '}
-          dolor sit amet consectetur, adipisicing elit. Illo qui accusamus iusto
-          autem officiis debitis, similique aperiam rem possimus eum aliquam a,
-          facere ex sequi velit, vero nostrum cum ipsam impedit quas
-          necessitatibus.
-        </p>
+    <div className="w-full transition-colors duration-500">
+      <div ref={sectionRefs.hero}>
+        <Hero />
       </div>
-
-      {/* Heading */}
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 ">
-      <div className="flex justify-center mb-10"> {/* Example: w-1/2 or w-96 for a fixed width */}
-        <ScrollFloat
-          animationDuration={3}
-          ease='back.inOut(2)'
-          scrollStart='center bottom+=50%'
-          scrollEnd='bottom bottom-=40%'
-          stagger={0.03}
-        >
-            About us
-        </ScrollFloat>
+      <div ref={sectionRefs.about}>
+        <About />
       </div>
-      </h2>
-
-
-      {/* <p className="text-gray-500 text-lg">
-          Who We Are at First Crown Digital Agency
-        </p> */}
-
-      {/* Main Grid */}
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center max-w-6xl">
-        {/* Image Column */}
-        <div ref={imageRef} className="flex justify-center md:justify-end">
-          <div className="group w-full max-w-[500px] border-2 border-purple-200 rounded-xl shadow-lg p-2 bg-white overflow-hidden transition-all duration-300">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-              <img
-                src="https://i.ibb.co/FLshRw8F/about.jpg"
-                alt="About us"
-                className="w-full h-full object-cover rounded-lg transform transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-105"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-purple-800/20 rounded-lg pointer-events-none transition-all duration-500 group-hover:bg-purple-800/40"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Text Column */}
-        <div className="space-y-6">
-          <h3 className="about-para text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-            Lorem ipsum dolor sit amet consectetur.
-          </h3>
-          <p className="about-para text-gray-700 text-base md:text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo qui
-            accusamus iusto autem officiis debitis, similique aperiam rem
-            possimus eum aliq nderit laborum corporis quibusdam tempora?
-            Officiis dolores quaerat error saepe, consectetur placeat repellat
-            quo excepturi voluptate, nisi assumenda culpa sed pariatur?
-          </p>
-          <p className="about-para text-gray-700 text-base md:text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo qui
-            accusamus iusto autem officiis debitis, similique aperiam rem
-            possimus eum aliquam a, facere ex sequi velit.
-          </p>
-          <p className="about-para text-gray-700 text-base md:text-lg">
-            Deserunt at, distinctio animi, ad assumenda quaerat tempore ea quasi
-            magnam architecto molestias ducimus ratione fuga iste consequatur
-            officiis doloremque, reprehenderit laborum corporis quibusdam.
-          </p>
-          <button className="mt-4 bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-200">
-            Get Started
-          </button>
-        </div>
+      <div ref={sectionRefs.founders}>
+        <FoundersSection />
       </div>
-    </section>
+      <div ref={sectionRefs.number}>
+        <Number />
+      </div>
+      <div ref={sectionRefs.work}>
+        <Work />
+      </div>
+      <div ref={sectionRefs.service}>
+        <Service />
+      </div>
+      <div ref={sectionRefs.client}>
+        <Client />
+      </div>
+      <div ref={sectionRefs.faq}>
+        <FAQ />
+      </div>
+      <div ref={sectionRefs.contact}>
+        <ContactForm />
+      </div>
+      <div ref={sectionRefs.footer}>
+        <Footer />
+      </div>
+    </div>
   )
 }
 
-export default About
+export default Home

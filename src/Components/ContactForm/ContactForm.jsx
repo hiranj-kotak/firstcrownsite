@@ -7,7 +7,7 @@ const ContactForm = () => {
             {/* Left Section */}
             <div className="bg-white p-10 md:w-1/2 space-y-8">
                 <div>
-                    <button className="bg-[#D8B4FE] text-[12px] text-black font-medium  px-2 py-1 rounded ">
+                    <button className="bg-primary text-white text-[12px] text-black font-medium  px-2 py-1 rounded ">
                         KEEP IN TOUCH
                     </button>
                 </div>
@@ -43,62 +43,60 @@ const ContactForm = () => {
             </div>
 
 
-
             {/* Right Section */}
-            {/* Right Section */}
-            <div className="bg-purple-50 p-10 md:w-1/2">
-                <h2 className="text-5xl font-bold text-gray-900 mb-8">Say Hello!</h2>
+            <div className="bg-primary p-10 md:w-1/2">
+                <h2 className="text-5xl font-bold text-white mb-8">Say Hello!</h2>
                 <form className="space-y-6">
                     {/* Input Field */}
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter your name*"
-                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-black"
+                            className="w-full bg-transparent text-white outline-none py-2 pr-8 placeholder:text-white"
                         />
-                        <User className="absolute right-0 top-2.5 text-black" size={18} />
+                        <User className="absolute right-0 top-2.5 text-white" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="email"
                             placeholder="Enter your email address*"
-                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-black"
+                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
                         />
-                        <Mail className="absolute right-0 top-2.5 text-black" size={18} />
+                        <Mail className="absolute right-0 top-2.5 text-white" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter mobile number*"
-                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-black"
+                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
                         />
-                        <Phone className="absolute right-0 top-2.5 text-black" size={18} />
+                        <Phone className="absolute right-0 top-2.5 text-white" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter company name"
-                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-black"
+                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
                         />
-                        <Building className="absolute right-0 top-2.5 text-black" size={18} />
+                        <Building className="absolute right-0 top-2.5 text-white" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <textarea
                             placeholder="Tell us more about your project"
-                            className="w-full bg-transparent outline-none py-2 pr-8 resize-none placeholder:text-black"
+                            className="w-full bg-transparent outline-none py-2 pr-8 text-white  placeholder:text-white"
                             rows="2"
                         />
-                        <MessageSquare className="absolute right-0 top-2.5 text-black" size={18} />
+                        <MessageSquare className="absolute right-0 top-2.5 text-white" size={18} />
                     </div>
 
                     <div className="pt-4">
                         <button
                             type="submit"
-                            className="bg-purple-600 text-white px-6 py-2 rounded-full text-sm hover:bg-purple-700 transition"
+                            className="bg-white text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition"
                         >
                             Submit
                         </button>
