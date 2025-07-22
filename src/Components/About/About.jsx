@@ -58,7 +58,7 @@ function About({ className = '' }) {
       {/* Top Intro Text */}
       <div className="w-full mx-auto text-center mb-16">
         <p className="text-xl md:text-2xl font-regular leading-relaxed">
-          <span className="font-semibold">First Crown</span>{' '}
+          <span className="font-semibold text-theme-accent">First Crown</span>{' '}
           dolor sit amet consectetur, adipisicing elit. Illo qui accusamus iusto
           autem officiis debitis, similique aperiam rem possimus eum aliquam a,
           facere ex sequi velit, vero nostrum cum ipsam impedit quas

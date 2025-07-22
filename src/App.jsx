@@ -8,8 +8,8 @@ import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <BrowserRouter>
-      <SmoothFollower />
       <Nav />
+      <SmoothFollower />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<Carrers />} />

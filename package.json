@@ -11,6 +11,8 @@
     "host": "vite --host"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^1.10.34",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "locomotive-scroll": "^4.1.4",
