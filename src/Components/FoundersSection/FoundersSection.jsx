@@ -11,7 +11,7 @@ export default function FoundersSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full px-[5vw] pb-[10vh] min-h-screen"
+      className="w-full px-[5vw] pb-[10vh] min-h-fit"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
         Meet Our Founders

@@ -10,17 +10,5 @@
     "role": "CTO",
     "image": "https://robohash.org/zarnok-mech?set=set2&size=300x300",
     "desc": "Zarnok is the tech brain behind our cosmic engines. A binary-native from the Cypher Quadrant, he's built scalable AI systems used in over 9 galaxies. Rumor says he dreams in code."
-  },
-  {
-    "name": "Lyra Flux",
-    "role": "Creative Director",
-    "image": "https://robohash.org/lyra-flux?set=set2&size=300x300",
-    "desc": "Lyra crafts the visual language of our universe. Known for her stellar design instincts and nebula-inspired palettes, she shapes the emotional core of our brand across dimensions."
-  },
-  {
-    "name": "Krog Zenth",
-    "role": "Head of Marketing",
-    "image": "https://robohash.org/krog-zenth?set=set2&size=300x300",
-    "desc": "Krog is a marketing warlord from Saturn's second moon. With data tentacles in every quadrant, he launches campaigns that penetrate wormholes and resonate across realities."
   }
 ]
