@@ -15,21 +15,23 @@ import ContactForm from '../../Components/ContactForm/ContactForm'
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger)
 
-const sectionColors = {
-  hero: { bg: '#3B0764', text: '#ffffff' },
-  about: { bg: '#ffffff', text: '#000000' },
-  founders: { bg: '#3B0764', text: '#ffffff' },
-  number: { bg: '#3B0764', text: '#ffffff' },
-  work: { bg: '#ffffff', text: '#000000' },
-  service: { bg: '#3B0764', text: '#ffffff' },
-  client: { bg: '#ffffff', text: '#000000' },
-  faq: { bg: '#3B0764', text: '#ffffff' },
-  contact: { bg: '#ffffff', text: '#000000' },
+// Define which sections use which theme
+const sectionThemes = {
+  hero: 'dark',
+  about: 'light',
+  founders: 'dark',
+  number: 'dark',
+  work: 'light',
+  service: 'dark',
+  client: 'light',
+  faq: 'dark',
+  contact: 'light',
 }
 
 function Home() {
   const mainContainerRef = useRef(null)
-  const [textColor, setTextColor] = useState('#ffffff')
+  const [currentTheme, setCurrentTheme] = useState('dark')
+  
   const sectionRefs = {
     hero: useRef(null),
     about: useRef(null),
@@ -43,8 +45,17 @@ function Home() {
     footer: useRef(null),
   }
 
+  // Function to toggle theme
+  const toggleTheme = (theme) => {
+    setCurrentTheme(theme)
+    document.documentElement.setAttribute('data-theme', theme)
+  }
+
   useEffect(() => {
     const mainContainer = mainContainerRef.current
+    
+    // Set initial theme
+    toggleTheme('dark')
 
     // Iterate over each section to create a ScrollTrigger
     Object.keys(sectionRefs).forEach((sectionKey) => {
@@ -53,25 +64,16 @@ function Home() {
 
       ScrollTrigger.create({
         trigger: sectionEl,
-        start: 'top 70%', // When the top of the section hits the middle of the screen
-        end: 'bottom 70%', // When the bottom of the section leaves the middle of the screen
-        markers: true,
-        // Animate the background color on enter
+        start: 'top 70%',
+        end: 'bottom 70%',
+        markers: true, // Set to true for debugging
         onEnter: () => {
-          gsap.to(mainContainer, {
-            backgroundColor: sectionColors[sectionKey].bg,
-            duration: 0.5,
-            ease: 'power1.inOut',
-          });
-          setTextColor(sectionColors[sectionKey].text);
+          const theme = sectionThemes[sectionKey]
+          toggleTheme(theme)
         },
         onEnterBack: () => {
-          gsap.to(mainContainer, {
-            backgroundColor: sectionColors[sectionKey].bg,
-            duration: 0.5,
-            ease: 'power1.inOut',
-          });
-          setTextColor(sectionColors[sectionKey].text);
+          const theme = sectionThemes[sectionKey]
+          toggleTheme(theme)
         },
       })
     })
@@ -80,17 +82,23 @@ function Home() {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
-  }, []) // Empty dependency array ensures this runs only once on mount
+  }, [])
 
   return (
     <div
       ref={mainContainerRef}
-      style={{
-        backgroundColor: sectionColors.hero.bg,
-        color: textColor,
-        transition: 'color 0.5s ease',
-      }} // Set initial background color
+      className="bg-theme-bg text-theme-text min-h-screen"
     >
+      Optional: Manual theme toggle button for testing
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
+          className="bg-theme-primary hover:bg-theme-secondary text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300"
+        >
+          Toggle to {currentTheme === 'light' ? 'Dark' : 'Light'} Theme
+        </button>
+      </div>
+
       <div ref={sectionRefs.hero}>
         <Hero />
       </div>
@@ -109,8 +117,8 @@ function Home() {
       <div ref={sectionRefs.service}>
         <Service />
       </div>
-      <div ref={sectionRefs.client} style={{ border: '2px solid red' }} className='overflow-visible'>
-        <Client ref={sectionRefs.client} />
+      <div ref={sectionRefs.client}>
+        <Client />
       </div>
       <div ref={sectionRefs.faq}>
         <FAQ />
@@ -118,9 +126,6 @@ function Home() {
       <div ref={sectionRefs.contact}>
         <ContactForm />
       </div>
-      {/* <div ref={sectionRefs.footer}>
-        <Footer />
-      </div> */}
     </div>
   )
 }

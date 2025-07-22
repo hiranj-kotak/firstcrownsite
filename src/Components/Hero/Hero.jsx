@@ -1,5 +1,5 @@
 import React from 'react'
-import rocket from '../../assets/hero-illu.gif'
+import rocket from '../../assets/hero-i.svg'
 import cloud from '../../assets/clouds.png'
 import WordListSwap from './WordListSwap'
 import HeroIcons from './HeroIcons'
@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="relative z-10 md:flex-[0.5] w-full max-w-[500px]">
+      <div className="relative z-10 md:flex-[0.5] w-full">
         <img src={rocket} alt="rocket" className="w-full mix-blend-multiply" />
       </div>
     </section>

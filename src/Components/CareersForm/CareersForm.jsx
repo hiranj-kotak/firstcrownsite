@@ -14,7 +14,7 @@ const CareersForm = () => {
     <div className="max-w-6xl mx-auto  mt-32 mb-32 rounded-xl overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-2">
       {/* Left Section */}
       <div className="bg-white p-10 space-y-6">
-        <button className="bg-primary text-[12px] text-white font-semibold px-3 py-1 rounded">
+        <button className="bg-dark-bg text-[12px] text-white font-semibold px-3 py-1 rounded">
           WE ARE HIRING
         </button>
         <h2 className="text-4xl font-bold">Be part of our mission</h2>
@@ -47,7 +47,7 @@ const CareersForm = () => {
       </div>
 
       {/* Right Section */}
-      <div className="bg-primary text-white p-10">
+      <div className="bg-dark-bg text-white p-10">
         <h3 className="text-3xl font-bold mb-6">Fill in the blanks</h3>
         <form className="space-y-6">
           {/* Name */}
@@ -127,7 +127,7 @@ const CareersForm = () => {
           <div className="pt-4">
             <button
               type="submit"
-              className="bg-white text-primary px-6 py-2 rounded-full text-sm hover:bg-purple-700 transition"
+              className="bg-dark-text text-dark-bg px-6 py-2 rounded-full text-sm hover:bg-purple-700 transition"
             >
               Submit
             </button>

@@ -4,7 +4,30 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#3B0764",
+        // Light Theme Colors
+        light: {
+          bg: '#ffffff',
+          text: '#000000',
+          primary: '#3B0764',
+
+        },
+        // Dark Theme Colors  
+        dark: {
+          bg: '#3B0764',
+          text: '#ffffff',
+          primary: '#F3E8FF',
+        },
+        // Dynamic theme colors using CSS custom properties
+        theme: {
+          bg: 'var(--theme-bg)',
+          text: 'var(--theme-text)',
+          primary: 'var(--theme-primary)',
+          secondary: 'var(--theme-secondary)',
+          cardText: 'var(--theme-secondary)',
+          accent: 'var(--theme-accent)',
+          card: 'var(--theme-card)',
+          border: 'var(--theme-border)',
+        }
       },
       fontSize: {
         giant: "7.5rem",
@@ -24,4 +47,4 @@ export default {
     },
   },
   plugins: [],
-};
+}

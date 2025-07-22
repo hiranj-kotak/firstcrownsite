@@ -1,13 +1,15 @@
 import React from 'react';
 import { Mail, Phone, MapPin, User, MessageSquare, Building } from 'lucide-react';
+import { section } from 'motion/react-client';
 
 const ContactForm = () => {
     return (
-        <div className="flex flex-col md:flex-row rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto my-32 ">
+        <section className='py-32'> 
+        <div className="flex flex-col md:flex-row rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto bg-theme-bg text-theme-text  ">
             {/* Left Section */}
-            <div className="bg-white p-10 md:w-1/2 space-y-8">
+            <div className="bg-theme-bg  text-theme-text p-10 md:w-1/2 space-y-8">
                 <div>
-                    <button className="bg-primary text-white text-[12px] text-black font-medium  px-2 py-1 rounded ">
+                    <button className="bg-theme-card text-theme-secondary  text-[12px]  font-medium  px-2 py-1 rounded ">
                         KEEP IN TOUCH
                     </button>
                 </div>
@@ -17,26 +19,26 @@ const ContactForm = () => {
                 </div>
                 <div className="divide-y divide-gray-300">
                     <div className="flex items-start gap-4 py-4">
-                        <Phone className="text-black mt-1" size={20} />
+                        <Phone className="mt-1" size={20} />
                         <div>
                             <p className="text-sm">Feel free to get in touch?</p>
-                            <p className="text-sm font-bold text-black">+91 98765 43210</p>
+                            <p className="text-sm font-bold ">+91 98765 43210</p>
                         </div>
                     </div>
 
                     <div className="flex items-start gap-4 py-4">
-                        <Mail className="text-black mt-1" size={20} />
+                        <Mail className=" mt-1" size={20} />
                         <div>
                             <p className="text-sm">How can we help you?</p>
-                            <p className="text-sm font-bold text-black">hello@email.com</p>
+                            <p className="text-sm font-bold ">hello@email.com</p>
                         </div>
                     </div>
 
                     <div className="flex items-start gap-4 py-4">
-                        <MapPin className="text-black mt-1" size={20} />
+                        <MapPin className=" mt-1" size={20} />
                         <div>
                             <p className="text-sm">Are you ready for coffee?</p>
-                            <p className="text-sm font-bold text-black">Ahmedabad, Gujarat, India.</p>
+                            <p className="text-sm font-bold">Ahmedabad, Gujarat, India.</p>
                         </div>
                     </div>
                 </div>
@@ -44,59 +46,59 @@ const ContactForm = () => {
 
 
             {/* Right Section */}
-            <div className="bg-primary p-10 md:w-1/2">
-                <h2 className="text-5xl font-bold text-white mb-8">Say Hello!</h2>
+            <div className="bg-theme-card text-theme-cardText p-10 md:w-1/2">
+                <h2 className="text-5xl font-bold mb-8">Say Hello!</h2>
                 <form className="space-y-6">
                     {/* Input Field */}
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter your name*"
-                            className="w-full bg-transparent text-white outline-none py-2 pr-8 placeholder:text-white"
+                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-theme-cardText"
                         />
-                        <User className="absolute right-0 top-2.5 text-white" size={18} />
+                        <User className="absolute right-0 top-2.5" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="email"
                             placeholder="Enter your email address*"
-                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
+                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-theme-cardText"
                         />
-                        <Mail className="absolute right-0 top-2.5 text-white" size={18} />
+                        <Mail className="absolute right-0 top-2.5" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter mobile number*"
-                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
+                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-theme-cardText"
                         />
-                        <Phone className="absolute right-0 top-2.5 text-white" size={18} />
+                        <Phone className="absolute right-0 top-2.5" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <input
                             type="text"
                             placeholder="Enter company name"
-                            className="w-full bg-transparent outline-none py-2 pr-8 text-white placeholder:text-white"
+                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-theme-cardText"
                         />
-                        <Building className="absolute right-0 top-2.5 text-white" size={18} />
+                        <Building className="absolute right-0 top-2.5" size={18} />
                     </div>
 
                     <div className="relative border-b border-gray-400">
                         <textarea
                             placeholder="Tell us more about your project"
-                            className="w-full bg-transparent outline-none py-2 pr-8 text-white  placeholder:text-white"
+                            className="w-full bg-transparent outline-none py-2 pr-8 placeholder:text-theme-cardText"
                             rows="2"
                         />
-                        <MessageSquare className="absolute right-0 top-2.5 text-white" size={18} />
+                        <MessageSquare className="absolute right-0 top-2.5" size={18} />
                     </div>
 
                     <div className="pt-4">
                         <button
                             type="submit"
-                            className="bg-white text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition"
+                            className="bg-theme-bg text-theme-text px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition"
                         >
                             Submit
                         </button>
@@ -104,6 +106,7 @@ const ContactForm = () => {
                 </form>
             </div>
         </div>
+        </section>
     );
 };
 

@@ -53,7 +53,7 @@ function About({ className = '' }) {
     <section
       id="about"
       ref={sectionRef}
-      className={`w-full px-[10vw] pt-[10vh] pb-[20vh] bg-transparent min-h-screen ${className}`}
+      className={`w-full px-[10vw] pt-[10vh] pb-[20vh] bg-theme-bg text-theme-text min-h-screen ${className}`}
     >
       {/* Top Intro Text */}
       <div className="w-full mx-auto text-center mb-16">
@@ -66,21 +66,9 @@ function About({ className = '' }) {
         </p>
       </div>
 
-      {/* Heading */}
-      <div className="h-30 w-1/2 mx-auto mb-20">
-        <TextPressure
-          text="About-us"
-          flex={false}
-          alpha={false}
-          stroke={false}
-          width={true}
-          weight={true}
-          italic={true}
-          textColor="inherit" // inherits from container
-          strokeColor="#ff0000"
-          minFontSize={12}
-        />
-      </div>
+       <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
+   About Us
+      </h2>
 
       {/* Main Grid */}
       <div className="mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center max-w-6xl">

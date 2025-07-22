@@ -47,10 +47,10 @@ export default function Number() {
   }, [])
 
   return (
-    <section className="w-full py-16 flex justify-center items-center">
+    <section className="w-full py-16 flex justify-center items-center bg-theme-bg text-theme-text">
       <div
         ref={sectionRef}
-        className="w-full max-w-6xl mx-auto rounded-xl border border-white/20 bg-primary shadow-[0_0_50px_rgba(147,51,234,0.2)] flex flex-col md:flex-row items-center justify-around px-6 md:px-16 py-8 gap-8"
+        className="w-full max-w-6xl mx-auto rounded-xl border border-white/20  bg-theme-bg shadow-[0_0_50px_rgba(147,51,234,0.2)] flex flex-col md:flex-row items-center justify-around px-6 md:px-16 py-8 gap-8"
       >
         {stats.map((stat, i) => (
           <div
@@ -59,11 +59,11 @@ export default function Number() {
           >
             <div
               ref={(el) => (numRefs.current[i] = el)}
-              className="text-3xl md:text-4xl font-extrabold mb-1"
+              className="text-3xl md:text-4xl font-extrabold mb-1 text-theme-text"
             >
               0
             </div>
-            <div className="text-sm md:text-base font-medium opacity-70">
+            <div className="text-sm md:text-base font-medium text-theme-text/70">
               {stat.label}
             </div>
           </div>

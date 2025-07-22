@@ -29,3 +29,34 @@
 .scale-down {
   transform: scale(0.5);
 }
+
+:root {
+  /* Light Theme (Default) */
+  --theme-bg: #ffffff;
+  --theme-text: #000000;
+  --theme-primary: #F3E8FF;
+  --theme-secondary: #ffffff;
+  --theme-accent: #9333ea;
+  --theme-cardText:#ffffff;
+  --theme-card: #3B0764;
+  --theme-border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+ --theme-bg: #3B0764;
+  --theme-text: #ffffff;
+  --theme-cardText:#000000;
+  --theme-primary: #3B0764;
+  --theme-secondary: #3B0764;
+  --theme-accent: #c084fc;
+  --theme-card: #ffffff;
+  --theme-border: #4c1d95;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}

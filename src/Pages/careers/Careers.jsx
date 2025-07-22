@@ -6,7 +6,6 @@ function Carrers() {
     return (
         <div className="w-auto">
             <CareersForm />
-            <Footer />
         </div>
     )
 }
