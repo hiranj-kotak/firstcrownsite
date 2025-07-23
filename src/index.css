@@ -1,6 +1,5 @@
 /* ✅ First! */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -23,9 +22,58 @@
   .shadow-4xl {
     box-shadow: 0 50px 80px -20px rgba(0, 0, 0, 0.3);
   }
+
+  /* Mobile-specific utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .safe-area-inset {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .mobile-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-scroll-smooth {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
+/* Mobile-first responsive design */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 .scale-down {
   transform: scale(0.5);
@@ -33,21 +81,21 @@
 
 :root {
   /* Light Theme (Default) */
-  --theme-bg: #eee;
+  --theme-bg: #ffffff;
   --theme-text: #000000;
   --theme-primary: #F3E8FF;
   --theme-secondary: #ffffff;
   --theme-accent: #9333ea;
-  --theme-cardText:#ffffff;
+  --theme-cardText: #ffffff;
   --theme-card: #3B0764;
   --theme-border: #e2e8f0;
 }
 
 [data-theme="dark"] {
   /* Dark Theme */
- --theme-bg: #3B0764;
+  --theme-bg: #3B0764;
   --theme-text: #ffffff;
-  --theme-cardText:#000000;
+  --theme-cardText: #000000;
   --theme-primary: #3B0764;
   --theme-secondary: #3B0764;
   --theme-accent: #c084fc;
@@ -60,4 +108,51 @@
   transition-property: color, background-color, border-color;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+}
+
+/* Mobile-specific media queries */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-block {
+    display: block !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .mobile-py-8 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Improve mobile performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Better mobile focus states */
+@media (hover: none) and (pointer: coarse) {
+
+  button:focus,
+  a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #9333ea;
+    outline-offset: 2px;
+  }
 }

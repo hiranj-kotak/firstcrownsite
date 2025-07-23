@@ -31,7 +31,7 @@ const sectionThemes = {
 function Home() {
   const mainContainerRef = useRef(null)
   const [currentTheme, setCurrentTheme] = useState('dark')
-  
+
   const sectionRefs = {
     hero: useRef(null),
     about: useRef(null),
@@ -53,7 +53,7 @@ function Home() {
 
   useEffect(() => {
     const mainContainer = mainContainerRef.current
-    
+
     // Set initial theme
     toggleTheme('dark')
 
