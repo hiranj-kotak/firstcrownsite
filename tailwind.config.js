@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['"Archivo"', "sans-serif"], // Usage: class="font-sans"
+        sans: ['"Onest"', "sans-serif"], // Usage: class="font-heading"
+        mono: ['"Fira Code"', "monospace"], // Usage: class="font-mono"
+      },
       colors: {
         // Light Theme Colors
         light: {

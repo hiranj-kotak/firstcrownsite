@@ -87,13 +87,13 @@ function Home() {
   return (
     <div
       ref={mainContainerRef}
-      className="bg-theme-bg text-theme-text min-h-screen"
+      className="bg-theme-bg  text-theme-text min-h-screen"
     >
       Optional: Manual theme toggle button for testing
-      <div className="fixed top-4 right-4 z-50">
+      <div className="fixed top-32 right-4 z-50">
         <button
           onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}
-          className="bg-theme-primary hover:bg-theme-secondary text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300"
+          className="bg-[#252525] text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300"
         >
           Toggle to {currentTheme === 'light' ? 'Dark' : 'Light'} Theme
         </button>

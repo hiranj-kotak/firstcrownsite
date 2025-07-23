@@ -1,5 +1,6 @@
 /* ✅ First! */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -32,7 +33,7 @@
 
 :root {
   /* Light Theme (Default) */
-  --theme-bg: #ffffff;
+  --theme-bg: #eee;
   --theme-text: #000000;
   --theme-primary: #F3E8FF;
   --theme-secondary: #ffffff;

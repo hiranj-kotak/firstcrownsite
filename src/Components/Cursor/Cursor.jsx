@@ -70,7 +70,7 @@ export default function SmoothFollower() {
     }, []);
     if (typeof window === 'undefined') return null;
     return (
-        <div className="pointer-events-none fixed inset-0 z-50">
+        <div className="pointer-events-none fixed inset-0 z-[100]">
             <div
                 className="absolute rounded-full  bg-theme-text "
                 style={{

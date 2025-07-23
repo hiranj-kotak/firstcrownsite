@@ -56,9 +56,9 @@ function About({ className = '' }) {
       className={`w-full px-4 sm:px-6 md:px-[5vw] lg:px-[10vw] pt-[8vh] sm:pt-[10vh] pb-[15vh] sm:pb-[20vh] bg-theme-bg text-theme-text min-h-screen ${className}`}
     >
       {/* Top Intro Text */}
-      <div className="w-full mx-auto text-center mb-12 sm:mb-16">
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-regular leading-relaxed max-w-4xl mx-auto px-2">
-          <span className="font-semibold">First Crown</span>{' '}
+      <div className="w-full mx-auto text-center mb-16">
+        <p className="text-xl md:text-2xl font-regular leading-relaxed">
+          <span className="font-semibold text-theme-accent">First Crown</span>{' '}
           dolor sit amet consectetur, adipisicing elit. Illo qui accusamus iusto
           autem officiis debitis, similique aperiam rem possimus eum aliquam a,
           facere ex sequi velit, vero nostrum cum ipsam impedit quas
@@ -66,8 +66,8 @@ function About({ className = '' }) {
         </p>
       </div>
 
-       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 lg:mb-20">
-   About Us
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 lg:mb-20">
+        About Us
       </h2>
 
       {/* Main Grid */}
