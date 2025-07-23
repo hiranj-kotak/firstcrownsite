@@ -77,7 +77,7 @@ function Work() {
             <div
               key={index}
               ref={(el) => (itemRefs.current[index] = el)}
-              className="flex-shrink-0 min-w-[375px]"
+              className="flex-shrink-0 min-w-[375px] "
             >
               <div className="rounded-2xl overflow-hidden shadow-md w-[375px] h-[480px]">
                 <img

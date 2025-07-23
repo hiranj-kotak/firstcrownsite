@@ -33,7 +33,7 @@
 
 :root {
   /* Light Theme (Default) */
-  --theme-bg: #ffffff;
+  --theme-bg: #eee;
   --theme-text: #000000;
   --theme-primary: #F3E8FF;
   --theme-secondary: #ffffff;

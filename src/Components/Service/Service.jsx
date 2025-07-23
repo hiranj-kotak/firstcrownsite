@@ -96,7 +96,7 @@ export default function Service() {
             transitionSpeed={1000}
             tiltMaxAngleX={6}
             tiltMaxAngleY={6}
-            className="work-card relative rounded-2xl p-6 bg-[#6B21A8] border border-[#7E22CE] outline outline-1 outline-[#885fe7] shadow-md hover:shadow-2xl transition-shadow duration-300"
+            className="work-card relative rounded-2xl p-6 bg-[#6B21A8] border border-[#7E22CE] outline outline-1 outline-[#885fe7] shadow-md hover:shadow-2xl transition-shadow duration-300 bg-theme-bg text-theme-text"
           >
             <div className="flex flex-col gap-3">
               <div className="text-4xl">{service.icon}</div>
