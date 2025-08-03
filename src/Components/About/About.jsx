@@ -53,7 +53,7 @@ function About({ className = '' }) {
     <section
       id="about"
       ref={sectionRef}
-      className={`w-full px-[10vw] pt-[10vh] pb-[20vh] bg-theme-bg text-theme-text min-h-screen ${className}`}
+      className={`w-full px-4 sm:px-6 md:px-[5vw] lg:px-[10vw] pt-[8vh] sm:pt-[10vh] pb-[15vh] sm:pb-[20vh] bg-theme-bg text-theme-text min-h-screen ${className}`}
     >
       {/* Top Intro Text */}
       <div className="w-full mx-auto text-center mb-16">
@@ -66,16 +66,16 @@ function About({ className = '' }) {
         </p>
       </div>
 
-       <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
-   About Us
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 lg:mb-20">
+        About Us
       </h2>
 
       {/* Main Grid */}
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-center max-w-6xl">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 sm:gap-10 lg:gap-10 items-center max-w-6xl">
         {/* Image Column */}
-        <div ref={imageRef} className="flex justify-center md:justify-end">
-          <div className="group w-full max-w-[500px] border-2 border-purple-200 rounded-xl shadow-lg p-2 overflow-hidden transition-all duration-300">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
+        <div ref={imageRef} className="flex justify-center lg:justify-end order-2 lg:order-1">
+          <div className="group w-full max-w-[400px] sm:max-w-[500px] border-2 border-purple-200 rounded-xl shadow-lg p-2 overflow-hidden transition-all duration-300">
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[500px] rounded-lg overflow-hidden">
               <img
                 src="https://i.ibb.co/FLshRw8F/about.jpg"
                 alt="About us"
@@ -87,30 +87,32 @@ function About({ className = '' }) {
         </div>
 
         {/* Text Column */}
-        <div className="space-y-6">
-          <h3 className="about-para text-3xl md:text-4xl font-extrabold leading-tight">
+        <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+          <h3 className="about-para text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight">
             Lorem ipsum dolor sit amet consectetur.
           </h3>
-          <p className="about-para text-base md:text-lg">
+          <p className="about-para text-sm sm:text-base lg:text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo qui
             accusamus iusto autem officiis debitis, similique aperiam rem
             possimus eum aliq nderit laborum corporis quibusdam tempora?
             Officiis dolores quaerat error saepe, consectetur placeat repellat
             quo excepturi voluptate, nisi assumenda culpa sed pariatur?
           </p>
-          <p className="about-para text-base md:text-lg">
+          <p className="about-para text-sm sm:text-base lg:text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo qui
             accusamus iusto autem officiis debitis, similique aperiam rem
             possimus eum aliquam a, facere ex sequi velit.
           </p>
-          <p className="about-para text-base md:text-lg">
+          <p className="about-para text-sm sm:text-base lg:text-lg leading-relaxed">
             Deserunt at, distinctio animi, ad assumenda quaerat tempore ea quasi
             magnam architecto molestias ducimus ratione fuga iste consequatur
             officiis doloremque, reprehenderit laborum corporis quibusdam.
           </p>
-          <button className="mt-4 bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-200">
-            Get Started
-          </button>
+          <div className="pt-2 sm:pt-4">
+            <button className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 sm:py-2 rounded-full font-semibold shadow transition-all duration-200 w-full sm:w-auto">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </section>

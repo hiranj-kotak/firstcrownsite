@@ -73,18 +73,18 @@ export default function Service() {
     <section
       id="service"
       ref={sectionRef}
-      className="py-16 px-4 md:px-10 min-h-screen"
+      className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 min-h-screen"
     >
-      <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-extrabold">
+      <div className="text-center mb-10 sm:mb-14">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
           What we serve
         </h2>
-        <p className="mt-2 text-sm md:text-base opacity-80">
+        <p className="mt-2 text-sm sm:text-base opacity-80 max-w-md mx-auto">
           All things design, we got you covered.
         </p>
       </div>
 
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <Tilt
             key={index}
@@ -98,12 +98,12 @@ export default function Service() {
             tiltMaxAngleY={6}
             className="work-card relative rounded-2xl p-6 bg-[#6B21A8] border border-[#7E22CE] outline outline-1 outline-[#885fe7] shadow-md hover:shadow-2xl transition-shadow duration-300 bg-theme-bg text-theme-text"
           >
-            <div className="flex flex-col gap-3">
-              <div className="text-4xl">{service.icon}</div>
-              <h3 className="text-lg font-semibold leading-tight">
+            <div className="flex flex-col gap-3 min-h-[200px] sm:min-h-[220px]">
+              <div className="text-3xl sm:text-4xl">{service.icon}</div>
+              <h3 className="text-base sm:text-lg font-semibold leading-tight">
                 {service.title}
               </h3>
-              <p className="text-sm leading-relaxed opacity-80">
+              <p className="text-xs sm:text-sm leading-relaxed opacity-80 flex-1">
                 {service.desc}
               </p>
             </div>
