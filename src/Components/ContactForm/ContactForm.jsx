@@ -5,7 +5,9 @@ import { section } from 'motion/react-client';
 const ContactForm = () => {
     return (
         <section className='py-32'> 
-        <div className="flex flex-col md:flex-row rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto bg-theme-bg text-theme-text  ">
+        <div 
+        style={{boxShadow: "0px 0px 25px 1px rgba(0, 0, 0, 0.175)"}}
+        className="flex flex-col md:flex-row rounded-xl  overflow-hidden max-w-5xl mx-auto bg-theme-bg text-theme-text  " >
             {/* Left Section */}
             <div className="bg-theme-bg  text-theme-text p-10 md:w-1/2 space-y-8">
                 <div>

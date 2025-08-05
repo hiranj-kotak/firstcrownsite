@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-dark-bg">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <div className=" mx-auto flex items-center justify-between px-[5vw] md:px-[10vw] py-3">
         {/* Logo */}
         <div className="text-2xl font-bold text-white">
           <span className="text-white">First</span>Crown

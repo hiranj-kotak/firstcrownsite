@@ -11,13 +11,13 @@ export default function FoundersSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full px-[5vw] pb-[10vh] min-h-fit"
+      className="w-full px-[10vw] pb-[10vh] min-h-fit"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
         Meet Our Founders
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-24 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-24  mx-auto">
         {founders.map((founder, idx) => (
           <div
             key={idx}

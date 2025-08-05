@@ -6,21 +6,21 @@ import HeroIcons from './HeroIcons'
 import Spline from '@splinetool/react-spline'
 import "./Hero.css"
 
-const heroWords = ['Results', 'Growth', 'Leads', 'Impact']
+const heroWords = ['Crafting Crowns', 'Not Just Campaigns']
 
 const Hero = () => {
   return (
     <section className="relative flex flex-col md:flex-row justify-between items-center px-[5vw] md:px-[10vw] pt-[10vh] pb-[20vh] min-h-screen w-full overflow-hidden">
       {/* Left Section */}
-      <div className="relative z-10 flex flex-col gap-4 md:flex-[0.5] lg:flex-[0.45] w-full text-center md:text-left mt-0 md:mt-0">
+      <div className="relative z-10 flex flex-col gap-4 md:flex-[0.5] lg:flex-[0.5] w-full text-center md:text-left mt-0 md:mt-0">
         <div className="flex flex-col gap-4 min-h-[6rem] md:min-h-[10rem] items-center md:items-start">
-          <div className="font-thin text-[5rem] md:text-[5rem] lg:text-[7.5rem] leading-none">
-            Organic
+          <div className="font-thin text-[5rem] md:text-[5rem] lg:text-[5rem] leading-none">
+            First Crown 
           </div>
 
           <WordListSwap
             texts={heroWords}
-            mainClassName="text-[5rem] md:text-[5rem] lg:text-[7.5rem] font-bold leading-none overflow-hidden relative flex items-end min-h-[4rem] md:min-h-[8rem]"
+            mainClassName="text-[5rem] md:text-[5rem] lg:text-[7rem] font-bold leading-none overflow-hidden relative flex items-end min-h-[4rem] md:min-h-[8rem]"
             staggerFrom="last"
             initial={{ y: '100%' }}
             animate={{ y: 0, opacity: 1 }}
@@ -32,9 +32,15 @@ const Hero = () => {
           />
         </div>
 
-        <div className="text-sm mt-4 px-4 md:px-0">
-          We offer flexible pricing plans so that our <br />
-          clients can take advantage of services.
+        <div className="text-lg mt-4 px-4 md:px-0">
+         We don’t run campaigns we build empires. At
+First Crown Media, 
+<br />
+we turn brands into icons,
+stories into headlines, and content into culture.
+<br />
+ If
+you’re ready to rule, we’re ready to crown you.
         </div>
 
         <div className="mt-4">
@@ -45,15 +51,15 @@ const Hero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="relative z-10 md:flex-[0.5] lg:flex-[0.55] w-full" id='hero-sp'>
-      <Spline className='w-full '
+      <div className="relative z-10 md:flex-[0.5] lg:flex-[0.5] w-full flex align-center justify-center" id='hero-sp'>
+      {/* <Spline className='w-full '
        
          scene="https://prod.spline.design/cWEP9QIQIoUuCXBe/scene.splinecode" 
-       /> 
+       />  */}
        {/* <Spline
         scene="https://prod.spline.design/j89rFjD-GaQp0Ucv/scene.splinecode" 
       /> */}
-        {/* <img src={rocket} alt="rocket" className="w-full mix-blend-multiply" /> */}
+        <img src={rocket} alt="rocket" className="w-full scale-115 mix-blend-multiply" />
       </div>
     </section>
   )

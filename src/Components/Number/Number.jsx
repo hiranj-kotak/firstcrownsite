@@ -5,9 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
-  { value: 8000000, label: 'Trusted user', suffix: 'M+' },
-  { value: 84000, label: 'Telephonic talk', suffix: 'K' },
-  { value: 9000000, label: 'Project Finished', suffix: 'M+' },
+  { value: 8000, label: 'Trusted user', suffix: 'M+' },
+  { value: 840, label: 'Telephonic talk', suffix: 'K' },
+  { value: 90, label: 'Project Finished', suffix: 'M+' },
   { value: 255, label: 'Award Winning', suffix: '' },
 ]
 
@@ -61,7 +61,7 @@ export default function Number() {
               ref={(el) => (numRefs.current[i] = el)}
               className="text-3xl md:text-4xl font-extrabold mb-1 text-theme-text"
             >
-              0
+              {stat.value} {stat.suffix}
             </div>
             <div className="text-sm md:text-base font-medium text-theme-text/70">
               {stat.label}
